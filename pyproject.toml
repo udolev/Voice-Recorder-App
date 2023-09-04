@@ -6,8 +6,9 @@ authors = ["udolev <udolev@yatmal.co.il>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.11"
+python = ">=3.11,<3.13"
 PyAudio = "^0.2.13"
+pyinstaller = "^5.13.2"
 
 
 [build-system]

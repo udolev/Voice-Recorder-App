@@ -55,17 +55,20 @@ class VoiceRecorder:
         exists = True
         i = 1
         while exists:
-            if os.path.exists(f"recordings/recording{i}.wav"):
+            rp = f"C:\\Users\\uriel\\dev\\voice-recorder-app\\recordings\\recording{i}.wav"
+            if os.path.exists(rp):
                 i += 1
             else:
                 exists = False
 
-        sound_file = wave.open(f"recordings/recording{i}.wav", "wb")
+        sound_file = wave.open(rp, "wb")
         sound_file.setnchannels(1)
         sound_file.setsampwidth(audio.get_sample_size(pyaudio.paInt16))
         sound_file.setframerate(44100)
         sound_file.writeframes(b"".join(frames))
         sound_file.close()
+
+        print(f"recording {i} saved successfuly at '{rp}'")
 
 
 VoiceRecorder()
