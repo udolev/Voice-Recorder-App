@@ -13,7 +13,7 @@ class VoiceRecorder:
         self.button = tk.Button(text="🎙", font=("Arial", 120, "bold"),
                                 command=self.click_handler)
         self.button.pack()
-        self.label = tk.Label(text="00:00:00")
+        self.label = tk.Label(text="00:00:00", font=(30))
         self.label.pack()
         self.recording = False
         self.root.mainloop()
