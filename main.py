@@ -49,6 +49,9 @@ class VoiceRecorder:
         stream.close()
         audio.terminate()
 
+        self.save_recording(audio, frames)
+
+    def save_recording(self, audio, frames):
         exists = True
         i = 1
         while exists:
